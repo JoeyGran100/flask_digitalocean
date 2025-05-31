@@ -28,7 +28,7 @@ limiter = Limiter(
 def create_app():
     app = Flask(__name__)
     CORS(app)
-    # csrf.init_app(app)
+    csrf.init_app(app)
     app.config[
         'SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
     app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
